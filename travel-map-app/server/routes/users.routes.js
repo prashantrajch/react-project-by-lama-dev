@@ -6,13 +6,12 @@ const { SALT_ROUNDS } = require("../constants");
 const asyncHandler = require("../utils/asyncHandler");
 
 // Register
-router.post(
-  "/register",
-  asyncHandler(async (req, res) => {
+router.post("/register", async (req, res) => {
+  try {
     // generate  new password
     const salt = await bcrypt.genSalt(SALT_ROUNDS);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
-    req.body.password = hashedPassword;
+    newUser.password = hashedPassword;
 
     // create new user
     const newUser = new User(req.body);
@@ -20,11 +19,13 @@ router.post(
     // save user and send response
     const savedUser = await newUser.save();
     res.status(200).json(savedUser._id);
-  })
-);
+  } catch (err) {
+    console.log("-------catch block run on register account------");
+    res.status(500).json(err);
+  }
+});
 
 // login
-
 router.post("/login", async (req, res) => {
   try {
     // find user
@@ -40,6 +41,16 @@ router.post("/login", async (req, res) => {
 
     // send response
     res.status(200).json({ _id: user._id, username: user.username });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// get user
+router.get("/", async (req, res) => {
+  try {
+    const user = await User.find();
+    res.status(200).json(user);
   } catch (err) {
     res.status(500).json(err);
   }
