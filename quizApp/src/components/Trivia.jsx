@@ -11,9 +11,11 @@ const Trivia = ({
   setStop,
   setTimerIsStart,
 }) => {
-  const currentQuestion = questions[questionNumber - 1]; // Fixed variable name
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [className, setClassName] = useState(null);
+
+  // Current Question
+  const currentQuestion = questions[questionNumber - 1]; // Fixed variable name
 
   // Sound Hooks
   const [letsPlay, { stop: letsPlayStop }] = useSound(play);
@@ -32,10 +34,10 @@ const Trivia = ({
     const value = e.target.innerText;
     setSelectedAnswer(value);
     setClassName("active");
-    setTimerIsStart(false);
 
     delay(1000, () => {
       setClassName(currentQuestion.answer === value ? "correct" : "wrong");
+      setTimerIsStart(false);
     });
 
     delay(3000, () => {
@@ -46,6 +48,7 @@ const Trivia = ({
           setStop(false);
           correctAnswerStop();
           setSelectedAnswer(null);
+          setTimerIsStart(false);
         });
       } else {
         wrongAnswer(); // Play wrong answer sound
@@ -53,6 +56,7 @@ const Trivia = ({
           setStop(true);
           wrongAnswerStop();
           setSelectedAnswer(null);
+          setTimerIsStart(false);
         });
       }
     });

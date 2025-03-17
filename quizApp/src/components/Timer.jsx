@@ -11,7 +11,7 @@ const Timer = ({ setStop, questionNumber, timerIsStart, setTimerIsStart }) => {
   const intervalRef = useRef(null);
 
   useEffect(() => {
-    // Play sound first, then start the timer after 1 second
+    // Play sound first, then start the timer after 2 second
     const timeOut = setTimeout(() => {
       setTimerIsStart(true);
       timerSound();
