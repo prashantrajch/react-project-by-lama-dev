@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Varela+Round&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-josefin: "Josefin Sans", sans-serif;
+  --font-lora: "Lora", serif;
+  --font-varela: "Varela Round", sans-serif;
+}
+
+.topListItem {
+  @apply mr-5 text-lg font-light cursor-pointer;
+}
