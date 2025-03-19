@@ -8,7 +8,7 @@ import {
 
 export default function Topbar() {
   return (
-    <div className="w-full h-[50px] bg-white sticky top-0 flex items-center font-josefin ">
+    <div className="w-full h-[50px] bg-white sticky top-0 flex items-center font-josefin z-[999] ">
       <div className="topLeft flex-3 flex items-center justify-center text-xl text-[#444] gap-2.5 ">
         <FaFacebookSquare className="cursor-pointer" />
         <FaTwitterSquare className="cursor-pointer" />

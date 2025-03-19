@@ -1,11 +1,14 @@
 import React from "react";
-import { Header } from "../../components";
+import { Header, Posts, Sidebar } from "../../components";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
-      Home Page
-    </div>
+      <div className="flex">
+        <Posts />
+        <Sidebar />
+      </div>
+    </>
   );
 }
