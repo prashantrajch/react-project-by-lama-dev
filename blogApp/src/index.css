@@ -8,7 +8,7 @@
 }
 
 .topListItem {
-  @apply mr-5 text-lg font-light cursor-pointer hover:text-gray-500;
+  @apply mr-5 text-lg font-light cursor-pointer hover:text-gray-500 uppercase;
 }
 
 /* Sidebar Section */
@@ -31,4 +31,40 @@
 
 .postCat {
   @apply font-varela font-normal text-[11px] text-[#be9656] leading-5 mt-3.5 mr-2.5;
+}
+
+/* Write Section */
+
+.writeFormGroup {
+  @apply ml-[150px] flex items-center;
+}
+
+.writeInput {
+  @apply text-[30px] border-none p-5 w-[70vw] placeholder:text-[rgb(189,185,185)] placeholder:font-normal focus:outline-none;
+}
+
+/* Login section */
+
+.login,
+.register {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+}
+
+.register {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+}
+
+.loginInput,
+.registerInput {
+  @apply p-2.5 bg-white border-none;
 }

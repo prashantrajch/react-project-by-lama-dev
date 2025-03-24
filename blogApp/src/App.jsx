@@ -1,13 +1,11 @@
+import { Outlet } from "react-router-dom";
 import { Topbar } from "./components";
-import { Home, Single, Write } from "./pages";
 
 const App = () => {
   return (
     <>
       <Topbar />
-      {/* <Home /> */}
-      {/* <Single /> */}
-      <Write />
+      <Outlet />
     </>
   );
 };
