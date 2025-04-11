@@ -1,4 +1,5 @@
-@import "../../global.scss";
+@use "../../global.scss" as *;
+
 .portfolioList {
   font-size: 14px;
   padding: 7px;
