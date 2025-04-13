@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app {
+  margin-top: 50px;
+}
+
+.search {
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  width: 250px;
+  margin: 20px auto;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.listItem {
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #444;
+  font-weight: 300;
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 750px;
+  table-layout: fixed;
+}
+
+th {
+  padding: 5px;
+  font-size: 26px;
+  padding: 5px;
+}
+
+td {
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+}
